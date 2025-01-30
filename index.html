@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無名的CZY</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: '楷体' ,sans-serif;
+            color: #fff;
+			font-size: 19px;
+            background: #000;
+            overflow-y: auto; 
+        }
+
+        body {
+            background-image: url('https://i.ejiaimg.cn/201/2025/01/25/6794b53bce18c.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #00C5CF;
+            box-shadow: 0 0 20px rgba(0, 75, 135, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            color: #00C5CF;
+            text-shadow: 0 0 10px rgba(0, 75, 135, 0.8);
+        }
+		h2 {
+            font-size: 1.7rem;
+            margin: 20px 0;
+            color: #00C5CF;
+            text-shadow: 0 0 10px rgba(0, 75, 135, 0.8);
+        }
+		h3 {
+            font-size: 1rem;
+            margin: 20px 0;
+            color: #00C5CF;
+            text-shadow: 0 0 10px rgba(0, 75, 135, 0.8);
+        }
+        .info {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        .tech-border {
+            border: 2px solid #00C5CF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 75, 135, 0.6);
+            background: rgba(0, 0, 0, 0.4);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .tech-border:hover {
+            box-shadow: 0 0 30px rgba(0, 75, 135, 1);
+        }
+
+        a {
+            color: #00C5CF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #87CEEB;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: rgba(0, 75, 135, 0.2);
+            border: 2px solid #00C5CF;
+            border-radius: 5px;
+            color: #00C5CF;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: rgba(0, 75, 135, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 0 20px;
+        }
+
+        .expandable-content p {
+            margin: 20px 0;
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .extra-content {
+            margin-top: 40px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .extra-content h2 {
+            color: <strong>#00C5CF</strong>;
+            text-shadow: 0 0 10px rgba(0, 75, 135, 0.8);
+        }
+
+        .extra-content p {
+            margin: 20px 0;
+			font-size: 1.1rem;
+			line-height: 1.6;
+			white-space: normal; 
+			word-wrap: break-word; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 75, 135, 0.6);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid rgba(173, 216, 230, 0.8);
+            color: rgba(173, 216, 230, 1);
+            text-shadow: 0 0 10px rgba(173, 216, 230, 0.8);
+        }
+
+        th {
+            background-color: rgba(37, 7, 60, 0.2); 
+            font-size: 1.2em;
+        }
+
+        td {
+            background-color: rgba(54, 27, 82, 0.15);
+            font-size: 1.1em;
+        }
+
+        tr {
+            cursor: pointer; 
+            transition: background-color 0.3s ease;
+        }
+
+        tr:hover {
+            background-color: rgba(0, 75, 135, 0.2); 
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <img src="https://i.ejiaimg.cn/201/2025/01/25/6794b553b6189.jpg" alt="头像" class="avatar">
+
+        <h1>無名的CZY</h1>
+
+        <div class="tech-border">
+            <div class="info">
+                <h2><b>基本信息</b></h2>
+                <p><strong>职业：</strong>学生</p>
+                <p><strong>技能：</strong>写代码，翻译，还会……</p>
+                <p><strong>邮箱：</strong><a href="mailto:3630327054@qq.com">3630327054@qq.com</a></p>
+                <p><strong>微信：</strong>wxid_rnt0bym4ft3e22</p>
+				<p><strong>QQ：</strong>3630327054</p>
+                <p><strong>座右铭：</strong><i><u><b>A Path Across Hell,And Towards Any Beyond</b></u></i></p>
+				<p><strong>活跃于：</strong><strong><a href="https://backrooms.fandom.com/zh/wiki/Backrooms_Wiki" target="_blank">Fnadom Backeooms</a></strong><small>（除了翻译和代码还会啥)</small><a href="https://backrooms.fandom.com/zh/wiki/User:Zeyang_Chen" target="_blank"><b><big>-&gt;站内个人页面&lt;-</big></b></a><br></p>
+				<p>酷狗？？？<small>(调音师)</small>、B站<small>(没粉丝)</small>、某音<small>(没粉丝)</small><br></p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="toggleContent()"><b>点击查看翻译作品</b></button>
+
+        <div class="expandable-content" id="expandableContent">
+            <h2>翻译作品</h2>
+            <h3><b>楼层</b></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>   </th>
+                        <th>楼层</th>
+                        <th>名称</th>
+                        <th>更多信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_62'">
+                        <td>1.</td>
+                        <td>Level 62</td>
+                        <td>寂静风暴之屋</td>
+                        <td>人变兽...</td>
+                    </tr>
+                    <!-- 可以添加更多行 -->
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_293'">
+                        <td>2.</td>
+                        <td>Level 293</td>
+                        <td><i>墙有眼睛</i></td>
+                        <td>千万不要来到293层，以免怪物找上你</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_666.!!!!_(Joke)'">
+                        <td>3.</td>
+                        <td>Level 666.!!!!(Joke)</td>
+                        <td>/</td>
+                        <td>他妈的亖了</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_Bri%27ain'">
+                        <td>4.</td>
+                        <td>Level Bri'ain</td>
+                        <td>/</td>
+                        <td>...?</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_993.1'">
+                        <td>5.</td>
+                        <td>Level 993.1</td>
+                        <td>九霄云外</td>
+                        <td>阈限我爱你！！！</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_127'">
+                        <td>6.</td>
+                        <td>Level 127</td>
+                        <td>记忆方格</td>
+                        <td>你重要吗...</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_830'">
+                        <td>7.</td>
+                        <td>已归档页面/Level 830</td>
+                        <td>痛苦之海</td>
+                        <td>你可以祈求美好，但不可逃离苦难</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_-892'">
+                        <td>8.</td>
+                        <td>已归档页面/Level -892</td>
+                        <td>虚伪地狱</td>
+                        <td>地狱？人间？</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_-892'">
+                        <td>9.</td>
+                        <td>已归档页面/Level 951</td>
+                        <td>无垠寂静</td>
+                        <td>祥和一生...</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_729/1'">
+                        <td>10.</td>
+                        <td>已归档页面/Level 729</td>
+                        <td>粉彩田间</td>
+                        <td>满目粉彩，使现实变得暗淡</td>
+                    </tr>
+                </tbody>
+            </table>
+			
+			
+			<h3><b>故事</b></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>   </th>
+                        <th>故事</th>
+                        <th>原页面名称</th>
+                        <th>更多信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%BA%B5%E7%9B%AE%E5%9B%9B%E9%A1%BE%EF%BC%8C%E5%94%AF%E8%A7%81%E6%B7%B1%E6%B8%8A'">
+                        <td>1.</td>
+                        <td>纵目四顾，唯见深渊</td>
+                        <td>The Surrounding Abyss</td>
+                        <td>在现实世界中死去。而且，无路可逃</td>
+                    </tr>
+                    <!-- 可以添加更多行 -->
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E9%80%A0%E7%89%A9'">
+                        <td>2.</td>
+                        <td>造物</td>
+                        <td>Creation</td>
+                        <td>我已明知真相，但代价又是什么？</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%81%AD%E9%A1%B6%E4%B9%8B%E7%81%BE'">
+                        <td>3.</td>
+                        <td>灭顶之灾</td>
+                        <td>AGONY</td>
+                        <td>人的毁灭</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%81%AD%E9%A1%B6%E4%B9%8B%E7%81%BE'">
+                        <td>4.</td>
+                        <td>虚伪的光</td>
+                        <td>False Light</td>
+                        <td>超越人类赋予后室的意识，传播罪恶</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E6%97%A0%E5%B0%BD'">
+                        <td>5.</td>
+                        <td>无尽</td>
+                        <td>Endless</td>
+                        <td>地狱的边缘...</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/%E9%87%8D%E7%94%9F'">
+                        <td>6.</td>
+                        <td>已归档页面/重生</td>
+                        <td>Commencement</td>
+                        <td>千万不要去找神，不然它会找上你</td>
+                    </tr>
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/%E6%AC%BA%E8%AF%88'">
+                        <td>7.</td>
+                        <td>已归档页面/欺诈</td>
+                        <td>EXTORTION</td>
+                        <td>隐瞒的秘密，惨无人道的人体实验</td>
+                    </tr>
+                </tbody>
+            </table>
+		</div>
+		<br><br>
+        <div class="tech-border"><div class="extra-content">
+            <h2>更多信息</h2>
+            <h3>一、</h3>
+            <p>107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107107</p>
+            <h3>二、</h3>
+            <p><big><b><span style="text-shadow: 0 0 8px RGB(255, 255, 255)">CYF我爱你！！！！</span></b></big></p>
+            <h3>三、</h3>
+            <p>图片、由AI绘制，代码部分来源于AI</p>
+			<h3>亖、</h3>
+			<p>没想好，等待加入更多内容...</p>
+        </div>
+		</div>
+    </div>
+
+    <script>
+        function toggleContent() {
+            const content = document.getElementById('expandableContent');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null; 
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px'; 
+            }
+        }
+    </script>
+</body>
+</html>
