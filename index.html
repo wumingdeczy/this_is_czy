@@ -65,7 +65,7 @@
             font-size: 1.7rem;
             margin: 20px 0;
             color: #00C5CF;
-            text-shadow: 0 0 10px rgba(0, 75, 135, 0.8);
+            text-shadow: 0 0 10px rgba(0, 75, 135, 0.9);
         }
 		h3 {
             font-size: 1rem;
@@ -171,7 +171,7 @@
             text-align: center;
             border: 1px solid rgba(173, 216, 230, 0.8);
             color: rgba(173, 216, 230, 1);
-            text-shadow: 0 0 10px rgba(173, 216, 230, 0.8);
+            text-shadow: 0 0 10px rgba(173, 216, 230, 0.9);
         }
 
         th {
@@ -192,6 +192,19 @@
         tr:hover {
             background-color: rgba(0, 75, 135, 0.2); 
         }
+		.btn:active {
+			transform: translateY(0); /* 点击时按钮下沉 */
+			background: rgba(0, 75, 135, 0.6); /* 点击时背景色加深 */
+		}
+		.expandable-content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+			margin-top: 20px;
+			background: rgba(0, 0, 0, 0.4);
+			border-radius: 10px;
+			padding: 0 20px;
+		}
     </style>
 </head>
 <body>
@@ -231,62 +244,62 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_62'">
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_62'" title="点击查看">
                         <td>1.</td>
                         <td>Level 62</td>
                         <td>寂静风暴之屋</td>
                         <td>人变兽...</td>
                     </tr>
                     <!-- 可以添加更多行 -->
-                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_293'">
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_293'" title="点击查看">
                         <td>2.</td>
                         <td>Level 293</td>
                         <td><i>墙有眼睛</i></td>
                         <td>千万不要来到293层，以免怪物找上你</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_666.!!!!_(Joke)'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_666.!!!!_(Joke)'" title="点击查看">
                         <td>3.</td>
                         <td>Level 666.!!!!(Joke)</td>
                         <td>/</td>
                         <td>他妈的亖了</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_Bri%27ain'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_Bri%27ain'" title="点击查看">
                         <td>4.</td>
                         <td>Level Bri'ain</td>
                         <td>/</td>
                         <td>...?</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_993.1'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_993.1'" title="点击查看">
                         <td>5.</td>
                         <td>Level 993.1</td>
                         <td>九霄云外</td>
                         <td>阈限我爱你！！！</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_127'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/Level_127'" title="点击查看">
                         <td>6.</td>
                         <td>Level 127</td>
                         <td>记忆方格</td>
                         <td>你重要吗...</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_830'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_830'" title="点击查看">
                         <td>7.</td>
                         <td>已归档页面/Level 830</td>
                         <td>痛苦之海</td>
                         <td>你可以祈求美好，但不可逃离苦难</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_-892'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_-892'" title="点击查看">
                         <td>8.</td>
                         <td>已归档页面/Level -892</td>
                         <td>虚伪地狱</td>
                         <td>地狱？人间？</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_-892'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_-892'" title="点击查看">
                         <td>9.</td>
                         <td>已归档页面/Level 951</td>
                         <td>无垠寂静</td>
                         <td>祥和一生...</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_729/1'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/Level_729/1'" title="点击查看">
                         <td>10.</td>
                         <td>已归档页面/Level 729</td>
                         <td>粉彩田间</td>
@@ -307,44 +320,44 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%BA%B5%E7%9B%AE%E5%9B%9B%E9%A1%BE%EF%BC%8C%E5%94%AF%E8%A7%81%E6%B7%B1%E6%B8%8A'">
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%BA%B5%E7%9B%AE%E5%9B%9B%E9%A1%BE%EF%BC%8C%E5%94%AF%E8%A7%81%E6%B7%B1%E6%B8%8A'" title="点击查看">
                         <td>1.</td>
                         <td>纵目四顾，唯见深渊</td>
                         <td>The Surrounding Abyss</td>
                         <td>在现实世界中死去。而且，无路可逃</td>
                     </tr>
                     <!-- 可以添加更多行 -->
-                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E9%80%A0%E7%89%A9'">
+                    <tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E9%80%A0%E7%89%A9'" title="点击查看">
                         <td>2.</td>
                         <td>造物</td>
                         <td>Creation</td>
                         <td>我已明知真相，但代价又是什么？</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%81%AD%E9%A1%B6%E4%B9%8B%E7%81%BE'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%81%AD%E9%A1%B6%E4%B9%8B%E7%81%BE'" title="点击查看">
                         <td>3.</td>
                         <td>灭顶之灾</td>
                         <td>AGONY</td>
                         <td>人的毁灭</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%81%AD%E9%A1%B6%E4%B9%8B%E7%81%BE'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E7%81%AD%E9%A1%B6%E4%B9%8B%E7%81%BE'" title="点击查看">
                         <td>4.</td>
                         <td>虚伪的光</td>
                         <td>False Light</td>
                         <td>超越人类赋予后室的意识，传播罪恶</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E6%97%A0%E5%B0%BD'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E6%97%A0%E5%B0%BD'" title="点击查看">
                         <td>5.</td>
                         <td>无尽</td>
                         <td>Endless</td>
                         <td>地狱的边缘...</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/%E9%87%8D%E7%94%9F'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/%E9%87%8D%E7%94%9F'" title="点击查看">
                         <td>6.</td>
                         <td>已归档页面/重生</td>
                         <td>Commencement</td>
                         <td>千万不要去找神，不然它会找上你</td>
                     </tr>
-					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/%E6%AC%BA%E8%AF%88'">
+					<tr onclick="window.location.href='https://backrooms.fandom.com/zh/wiki/%E5%B7%B2%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2/%E6%AC%BA%E8%AF%88'" title="点击查看">
                         <td>7.</td>
                         <td>已归档页面/欺诈</td>
                         <td>EXTORTION</td>
@@ -362,11 +375,11 @@
             <p><big><b><span style="text-shadow: 0 0 8px RGB(255, 255, 255)">CYF我爱你！！！！</span></b></big></p>
             <h3>三、</h3>
             <p>图片由AI绘制，代码部分来源于AI</p>
-			<h3>亖、</h3>
-			<p>没想好，等待加入更多内容...</p>
-        </div>
-</div>
-</div>
+	    <h3>亖、</h3>
+	    <p>没想好，等待加入更多内容...</p>
+            </div>
+	</div>
+    </div>
 
     <script>
         function toggleContent() {
